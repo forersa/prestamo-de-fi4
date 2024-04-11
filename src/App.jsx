@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { reactLogo, viteLogo } from '/LogoBanco.jpeg'
+import reactLogo from '../public/LogoBanco.jpeg'
+import viteLogo from '../public/LogoCorporativo.jpeg'
 import './App.css'
 
 function App() {
