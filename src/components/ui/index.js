@@ -1,2 +1,5 @@
 export { default as LoadingSpinner }  from './LoadingSpinner'
 export { default as Button } from './Button.jsx'
+export { default as ErrorInfo } from './ErrorInfo.jsx'
+export { default as TextInput } from './TextInput.jsx'
+export { default as Title } from './Title.jsx'
