@@ -14,11 +14,11 @@ function OwnerSkeleton() {
     </div>
     <div className="w-full">
         <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-400 w-48 mb-4"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[480px] mb-2.5"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
         <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-400 w-48 mb-2.5"></div>
         <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[440px] mb-2.5"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-400 max-w-[460px] mb-2.5"></div>
-        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-400 max-w-[440px] mb-2.5"></div>
+        <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[440px] mb-2.5"></div>
     </div>
     <span className="sr-only">Loading...</span>
 </div>
@@ -28,18 +28,18 @@ function OwnerSkeleton() {
 }
 
 export default function Owner() {
-            const { data, isLoading } = useContractRead({
-          address: import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS,
-          abi: prestamoDeFi4ABI,
-          functionName: 'owner',
+    const { data, isLoading } = useContractRead({
+        address: import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS,
+        abi: prestamoDeFi4ABI,
+        functionName: 'owner'
         })
         
-        if (!isLoading) return <OwnerSkeleton />
+        if (isLoading) return <OwnerSkeleton />
     
     return (
-        <section>
+        <section className="flex flex-col bg-blue-200 shadow p-4 rounded w[360px] sm:w-[469px]">
             <Title>Owner</Title>
-            {isLoading ? <div>Loading ...</div>: <p>{data}</p>}
+            {isLoading ? <div>Loading ...</div>: <p className='text-xs sm:text-sm text-white bg-blue-900 p-2 rounded-md'>{data}</p>}
         </section>
     )
 }
