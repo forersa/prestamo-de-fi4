@@ -8,7 +8,7 @@ import { config } from './config/wagmi'
 function App() {
      return (
       <WagmiConfig config={config}>
-        <ConnectKitProvider>
+        <ConnectKitProvider mode='light'>
           <AppLayout>
             <Home />
           </ AppLayout>

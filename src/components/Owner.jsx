@@ -22,8 +22,6 @@ function OwnerSkeleton() {
     </div>
     <span className="sr-only">Loading...</span>
 </div>
-
-
     )
 }
 
@@ -39,7 +37,7 @@ export default function Owner() {
     return (
         <section className="flex flex-col bg-blue-200 shadow p-4 rounded w[360px] sm:w-[469px]">
             <Title>Owner</Title>
-            {isLoading ? <div>Loading ...</div>: <p className='text-xs sm:text-sm text-white bg-blue-900 p-2 rounded-md'>{data}</p>}
+            <p className="text-xs sm:text-sm text-black bg-blue-900 p-2 rounded-md">{data}</p>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import { useAccount } from "wagmi";
 import { LoadingSpinner, Button, ErrorInfo, TextInput, Title } from "../components/ui";
-import { Owner } from '../components'
+import { Owner, TokenInfo } from '../components'
 
 // Make sure that this component is wrapped with ConnectKitProvider
 export default function Home() {
@@ -25,6 +25,9 @@ export default function Home() {
      <Title>Este es un titulo</Title>
 
      <Owner />
+
+     <TokenInfo />
+     
      </div>
   )
 }
