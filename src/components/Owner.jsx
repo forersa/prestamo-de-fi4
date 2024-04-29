@@ -35,9 +35,9 @@ export default function Owner() {
         if (isLoading) return <OwnerSkeleton />
     
     return (
-        <section className="flex flex-col bg-blue-200 shadow p-4 rounded w[360px] sm:w-[469px]">
+        <section className="flex flex-col bg-blue-500 shadow p-4 rounded w[360px] sm:w-[469px]">
             <Title>Owner</Title>
-            <p className="text-xs sm:text-sm text-black bg-blue-900 p-2 rounded-md">{data}</p>
+            <p className="text-xs sm:text-sm bg-blue-300 p-2 rounded-md">{data}</p>
         </section>
     )
 }

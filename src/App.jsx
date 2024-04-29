@@ -3,12 +3,14 @@ import { Home } from "./pages"
 import { WagmiConfig } from "wagmi";
 import { ConnectKitProvider } from "connectkit";
 import { config } from './config/wagmi'
+import { Toaster } from 'react-hot-toast'
 
 
 function App() {
      return (
       <WagmiConfig config={config}>
-        <ConnectKitProvider mode='light'>
+        <Toaster position="botton-right" reverseOrder={false} />
+        <ConnectKitProvider mode="light">
           <AppLayout>
             <Home />
           </ AppLayout>

@@ -1,8 +1,7 @@
 import { useAccount } from "wagmi";
 import { LoadingSpinner, Button, ErrorInfo, TextInput, Title } from "../components/ui";
-import { Owner, TokenInfo } from '../components'
+import { Owner, TokenInfo, TokenTransferForm } from '../components'
 
-// Make sure that this component is wrapped with ConnectKitProvider
 export default function Home() {
   const { address, isConnecting, isDisconnected } = useAccount()
 
@@ -18,17 +17,19 @@ export default function Home() {
      </div>
      <ErrorInfo message>Error: Internal server error</ErrorInfo>
 
+     
      <div>
      <TextInput />
      </div>
 
-     <Title>Este es un titulo</Title>
+     <Title>Este es un titulo de muestra</Title>
 
      <Owner />
 
      <TokenInfo />
-     
-     </div>
+
+     <TokenTransferForm />
+   </div>
   )
 }
 

@@ -3,7 +3,7 @@ import { Button, TexInput, Title }  from './ui'
 import { useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 import { useState, useEffect } from 'react'
 import { parseEther } from 'viem/utils'
-import { Toast } from 'react-hot-toast'
+import { toast } from 'react-hot-toast'
 
 export default function TokenTransferForm() {
     const [to, setTo] = useState('')
@@ -27,17 +27,17 @@ export default function TokenTransferForm() {
         hash: data?.hash
     })
 
-    const handleToInputChange = (event) ==> {
+    const handleToInputChange = (event) => {
         setTo(event.target.value)
     }
 
-    const handleAmountInputChange = (event) ==> {
+    const handleAmountInputChange = (event) => {
         setAmount(event.target.value)
     }
 
-    useEffect(() ==> {
+    useEffect(() => {
         if (isTransactionSuccess) {
-            toast.Success('La transaccion se ha completado con exito')
+            toast.success('La transaccion se ha completado con exito')
             setTo('')
             setAmount('')
         }
@@ -47,7 +47,8 @@ export default function TokenTransferForm() {
     }, [isTransactionSuccess, isTransactionError])
 
     return (
-        <section className='bg-white'
+        <section className="bg-white p-4 border shadow rounded-lg text-sm space-y-2"/>
+           <Title>Token Transfer Form</Title>
     )
 }
 
